@@ -1,0 +1,33 @@
+#compdef udmroutes
+
+_udmroutes() {
+  local state
+
+  _arguments -C \
+    '1:action:(on off get)' \
+    '2:interface:->interfaces' \
+    '3:gateway:->gateways'
+
+  case $state in
+    interfaces)
+      local -a ifaces
+      ifaces=(${(f)"$(networksetup -listallnetworkservices | tail -n +2)"})
+      _describe 'network interfaces' ifaces
+      ;;
+    gateways)
+      if [[ $words[2] == "get" ]]; then
+        return 1
+      fi
+
+      local -a gateways
+      gateways=(
+        10.0.20.1
+        10.0.120.1
+        192.168.1.1
+        172.16.0.1
+        192.168.178.1
+      )
+      _describe 'gateways' gateways
+      ;;
+  esac
+}

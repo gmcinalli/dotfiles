@@ -1,0 +1,5 @@
+/sheldon/repos
+/sheldon/plugins.lock
+/sheldon/plugins/homebrew-token
+
+.DS_Store

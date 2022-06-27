@@ -1,0 +1,46 @@
+shell = "zsh"
+
+[plugins]
+
+# ZSH Defer
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+# OhMyZsh
+[plugins.oh-my-zsh]
+github = 'ohmyzsh/ohmyzsh'
+
+# Spaceship prompt
+[plugins.spaceship-config]
+local = "~/.dotfiles/sheldon/plugins/spaceship"
+[plugins.spaceship]
+github = 'spaceship-prompt/spaceship-prompt'
+
+# ZSH Syntax Highlighting
+[plugins.zsh-syntax-highlighting-config]
+local = "~/.dotfiles/sheldon/plugins/zsh-syntax-highlighting"
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+# ZSH Autosuggestions
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+apply = ["defer"]
+
+# Aliases
+[plugins.aliases]
+local = "~/.dotfiles/sheldon/plugins/aliases"
+[plugins.aliases-linux]
+local = "~/.dotfiles/sheldon/plugins/aliases-linux"
+
+# Utils
+[plugins.utils]
+local = "~/.dotfiles/sheldon/plugins/utils"
+[plugins.utils-linux]
+local = "~/.dotfiles/sheldon/plugins/utils-linux"
+
+# ZSH Defer template
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"

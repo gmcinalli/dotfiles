@@ -1,0 +1,15 @@
+DOTFILES="$HOME/.dotfiles"
+
+[ -f $DOTFILES/zshrc ] && . $DOTFILES/zshrc
+
+plugins+=(
+    macos
+    brew
+    nvm
+    npm
+    yarn
+)
+
+# Sheldon
+export SHELDON_CONFIG_FILE="$DOTFILES/sheldon/plugins-macos.toml"
+eval "$(sheldon source)"

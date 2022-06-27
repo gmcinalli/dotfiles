@@ -1,0 +1,40 @@
+format = """\
+[╭╴](239)$env_var\
+$all\
+[╰─](239)$character
+"""
+
+# Shows an icon that should be included by zshrc script based on the distribution or os
+[env_var.STARSHIP_DISTRO]
+format = '[$env_value](bold 242) '
+variable = "STARSHIP_DISTRO"
+
+[character]
+success_symbol = "[󰁔](239) "
+error_symbol = "[󰁔](239) "
+
+[username]
+style_user = "yellow bold"
+style_root = "black bold"
+format = "[$user]($style) "
+show_always = true
+
+[directory]
+format = "in [$path]($style)[$read_only]($read_only_style) "
+truncation_symbol = "…/"
+home_symbol = "󰋞 ~"
+read_only = "  "
+
+[git_branch]
+symbol = "󰊢 "
+
+[docker_context]
+disabled = true
+[python]
+disabled = true
+[package]
+disabled = true
+[nodejs]
+disabled = true
+[ruby]
+disabled = true

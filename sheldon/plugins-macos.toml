@@ -1,0 +1,60 @@
+shell = "zsh"
+
+[plugins]
+
+# ZSH Defer
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+# OhMyZsh
+[plugins.oh-my-zsh]
+github = 'ohmyzsh/ohmyzsh'
+
+# Spaceship prompt
+[plugins.spaceship-config]
+local = "~/.dotfiles/sheldon/plugins/spaceship"
+[plugins.spaceship]
+github = 'spaceship-prompt/spaceship-prompt'
+
+# ZSH Syntax Highlighting
+[plugins.zsh-syntax-highlighting-config]
+local = "~/.dotfiles/sheldon/plugins/zsh-syntax-highlighting"
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+# ZSH Autosuggestions
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+apply = ["defer"]
+
+# Homebrew
+[plugins.homebrew]
+local = "~/.dotfiles/sheldon/plugins/homebrew"
+[plugins.homebrew-token]
+local = "~/.dotfiles/sheldon/plugins/homebrew-token"
+
+# Aliases
+[plugins.aliases]
+local = "~/.dotfiles/sheldon/plugins/aliases"
+[plugins.aliases-macos]
+local = "~/.dotfiles/sheldon/plugins/aliases-macos"
+
+# Utils
+[plugins.utils]
+local = "~/.dotfiles/sheldon/plugins/utils"
+[plugins.utils-macos]
+local = "~/.dotfiles/sheldon/plugins/utils-macos"
+[plugins.utils-work]
+local = "~/.dotfiles/sheldon/plugins/utils-work"
+
+# Comletions
+[plugins.completions-macos]
+local = "~/.dotfiles/sheldon/plugins/completions-macos"
+use = ["{{ name }}.zsh"]
+apply = ["defer"]
+
+# ZSH Defer template
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
