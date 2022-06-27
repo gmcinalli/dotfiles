@@ -1,0 +1,42 @@
+shell = "zsh"
+
+[plugins]
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[plugins.oh-my-zsh]
+github = 'ohmyzsh/ohmyzsh'
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+[plugins.spaceship]
+github = 'spaceship-prompt/spaceship-prompt'
+
+[plugins.aliases]
+local = "~/.dotfiles/sheldon/plugins/aliases-linux"
+
+[plugins.exa]
+local = "~/.dotfiles/sheldon/plugins/exa"
+
+[plugins.spaceship-config]
+local = "~/.dotfiles/sheldon/plugins/spaceship"
+
+[plugins.utils]
+local = "~/.dotfiles/sheldon/plugins/utils-linux"
+
+[plugins.utils-linux]
+local = "~/.dotfiles/sheldon/plugins/utils-linux"
+
+[plugins.zsh-syntax-highlighting-config]
+local = "~/.dotfiles/sheldon/plugins/zsh-syntax-highlighting"
+
+# [plugins.zsh-autosuggestions]
+# github = "zsh-users/zsh-autosuggestions"
+# use = ["{{ name }}.zsh"]
+# apply = ["defer"]
+
+[templates]
+defer = { value = 'zsh-defer source "{{ file }}"', each = true }

@@ -1,0 +1,7 @@
+DOTFILES="$HOME/.dotfiles"
+
+[ -f $DOTFILES/zshrc ] && . $DOTFILES/zshrc
+
+# Sheldon
+export SHELDON_CONFIG_FILE="$DOTFILES/sheldon/plugins-linux.toml"
+eval "$(sheldon source)"

@@ -1,0 +1,51 @@
+shell = "zsh"
+
+[plugins]
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[plugins.oh-my-zsh]
+github = 'ohmyzsh/ohmyzsh'
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+[plugins.spaceship]
+github = 'spaceship-prompt/spaceship-prompt'
+
+[plugins.aliases]
+local = "~/.dotfiles/sheldon/plugins/aliases"
+
+[plugins.aliases-macos]
+local = "~/.dotfiles/sheldon/plugins/aliases-macos"
+
+[plugins.exa]
+local = "~/.dotfiles/sheldon/plugins/exa"
+
+[plugins.homebrew]
+local = "~/.dotfiles/sheldon/plugins/homebrew"
+
+[plugins.homebrew-token]
+local = "~/.dotfiles/sheldon/plugins/homebrew-token"
+
+[plugins.spaceship-config]
+local = "~/.dotfiles/sheldon/plugins/spaceship"
+
+[plugins.utils]
+local = "~/.dotfiles/sheldon/plugins/utils"
+
+[plugins.utils-macos]
+local = "~/.dotfiles/sheldon/plugins/utils-macos"
+
+[plugins.zsh-syntax-highlighting-config]
+local = "~/.dotfiles/sheldon/plugins/zsh-syntax-highlighting"
+
+# [plugins.zsh-autosuggestions]
+# github = "zsh-users/zsh-autosuggestions"
+# use = ["{{ name }}.zsh"]
+# apply = ["defer"]
+
+[templates]
+defer = { value = 'zsh-defer source "{{ file }}"', each = true }
