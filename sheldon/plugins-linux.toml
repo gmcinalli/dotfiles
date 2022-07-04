@@ -16,6 +16,9 @@ apply = ["defer"]
 github = 'spaceship-prompt/spaceship-prompt'
 
 [plugins.aliases]
+local = "~/.dotfiles/sheldon/plugins/aliases"
+
+[plugins.aliases-linux]
 local = "~/.dotfiles/sheldon/plugins/aliases-linux"
 
 [plugins.exa]
