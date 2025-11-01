@@ -1,11 +1,11 @@
 _udm_routes() {
     if [ "$#" -lt 2 ] || [ "$#" -gt 3 ]; then
-        echo "Usage: udmroutes [on|off|get] [INTERFACE_NAME] [GATEWAY (optional)]"
+        echo "Usage: customroutes [on|off|get] [INTERFACE_NAME] [GATEWAY (optional)]"
         return 1
     fi
 
     if [[ "$1" != "on" && "$1" != "off" && "$1" != "get" ]]; then
-        echo "Usage: udmroutes [on|off|get] [INTERFACE_NAME] [GATEWAY (optional)]"
+        echo "Usage: customroutes [on|off|get] [INTERFACE_NAME] [GATEWAY (optional)]"
         return 1
     fi
 
@@ -49,7 +49,7 @@ _udm_routes() {
 }
 
 # Wrapper compatibile con completamento zsh
-udmroutes() {
+customroutes() {
   _udm_routes "$@"
 }
 

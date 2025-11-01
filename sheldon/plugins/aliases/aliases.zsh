@@ -17,4 +17,4 @@ alias localip="ipconfig getifaddr en0"
 alias reload="exec ${SHELL} -l"
 
 # Cat with syntax highlighting
-alias cat="bat --theme OneHalfDark"
+alias bat="bat --theme OneHalfDark"

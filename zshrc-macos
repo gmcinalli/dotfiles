@@ -13,3 +13,6 @@ plugins+=(
 # Sheldon
 export SHELDON_CONFIG_FILE="$DOTFILES/sheldon/plugins-macos.toml"
 eval "$(sheldon source)"
+
+# Bitwarden SSH Agent
+export SSH_AUTH_SOCK=/Users/$USER/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock

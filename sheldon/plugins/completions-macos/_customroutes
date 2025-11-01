@@ -1,6 +1,6 @@
-#compdef udmroutes
+#compdef customroutes
 
-_udmroutes() {
+_customroutes() {
   local state
 
   _arguments -C \

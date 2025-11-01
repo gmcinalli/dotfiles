@@ -10,7 +10,6 @@ plugins=(
     git
     docker
     docker-compose
-    command-not-found
 )
 
 # Sheldon
